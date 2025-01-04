@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Migrations Demo</title>
+</head>
+<body>
+    <h1>Django Migrations Project</h1>
+    <h2>Authors</h2>
+    <ul>
+        {% for author in authors %}
+            <li>{{ author.name }} ({{ author.email }})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Books</h2>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author.name }} (Published: {{ book.published_date }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
